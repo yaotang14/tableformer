@@ -1,0 +1,13 @@
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Downloaded data files
+*.gz
+*.zip
+
+# Temporary files
+*.tmp
+*.temp

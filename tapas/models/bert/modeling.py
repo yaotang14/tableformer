@@ -571,7 +571,7 @@ def embedding_postprocessor(input_tensor,
       raise ValueError("`token_type_ids` must be specified if"
                        "`use_token_type` is True.")
 
-    tf.nest.assert_same_structure(token_type_ids, token_type_vocab_size)
+    #     tf.nest.assert_same_structure(token_type_ids, token_type_vocab_size)
     token_type_ids = tf.nest.flatten(token_type_ids)
     token_type_vocab_size = tf.nest.flatten(token_type_vocab_size)
 

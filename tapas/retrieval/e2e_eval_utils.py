@@ -34,7 +34,7 @@ from tapas.scripts import prediction_utils
 from tapas.utils import hybridqa_utils
 from tapas.utils import text_utils
 
-from official.nlp.bert import tokenization
+from transformers import BertTokenizer as tokenization
 
 
 @dataclasses.dataclass(frozen=True)

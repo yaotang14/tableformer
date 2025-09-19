@@ -16,6 +16,16 @@
 
 import collections
 import dataclasses
+from transformers import BertTokenizer
+class tokenization:
+    @staticmethod
+    def BasicTokenizer(do_lower_case=True):
+        from transformers import BertTokenizer
+        return BertTokenizer.from_pretrained("bert-base-uncased")
+    @staticmethod
+    def FullTokenizer(vocab_file, do_lower_case=True):
+        from transformers import BertTokenizer
+        return BertTokenizer.from_pretrained("bert-base-uncased")
 import hashlib
 import random
 from typing import Iterable, List, Mapping, Optional, Text, Tuple
@@ -33,7 +43,7 @@ from tapas.utils import text_index
 from tapas.utils import text_utils
 import tensorflow.compat.v1 as tf
 
-from official.nlp.bert import tokenization
+import tensorflow as tf
 
 _NS = 'main'
 _CLS = '[CLS]'
@@ -424,8 +434,8 @@ class TapasTokenizer:
   """Wraps a Bert tokenizer."""
 
   def __init__(self, vocab_file):
-    self._basic_tokenizer = tokenization.BasicTokenizer(do_lower_case=True)
-    self._wp_tokenizer = tokenization.FullTokenizer(
+    self._basic_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased").basic_tokenizer
+    self._wp_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased",
         vocab_file=vocab_file, do_lower_case=True)
 
   def get_vocab(self):

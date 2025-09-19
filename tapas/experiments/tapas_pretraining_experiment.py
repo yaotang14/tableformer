@@ -122,10 +122,9 @@ def main(_):
       use_tpu=FLAGS.use_tpu,
       restrict_attention_mode=attention_utils.RestrictAttentionMode(
           FLAGS.restrict_attention_mode),
-      restrict_attention_bucket_size=FLAGS.restrict_attention_bucket_size,
-      restrict_attention_header_size=FLAGS.restrict_attention_header_size,
-      restrict_attention_row_heads_ratio=(
-          FLAGS.restrict_attention_row_heads_ratio),
+      restrict_attention_bucket_size=0,
+      restrict_attention_header_size=None,
+      restrict_attention_row_heads_ratio=0.5,
       disabled_features=FLAGS.disabled_features,
       disable_position_embeddings=FLAGS.disable_position_embeddings,
       reset_position_index_per_cell=FLAGS.reset_position_index_per_cell,

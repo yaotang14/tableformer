@@ -28,7 +28,7 @@ from absl import logging
 from tapas.experiments import prediction_utils as exp_prediction_utils
 from tapas.models import tapas_classifier_model
 from tapas.models.bert import modeling
-from tapas.retrieval import e2e_eval_utils
+# from tapas.retrieval import e2e_eval_utils
 from tapas.scripts import calc_metrics_utils
 from tapas.scripts import prediction_utils
 from tapas.utils import file_utils

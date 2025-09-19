@@ -23,7 +23,7 @@ from tapas.protos import interaction_pb2
 from tapas.retrieval import e2e_eval_utils
 
 from google.protobuf import text_format
-from official.nlp.bert import tokenization
+from transformers import BertTokenizer as tokenization
 
 _RESERVED_SYMBOLS = ("[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "[EMPTY]")
 

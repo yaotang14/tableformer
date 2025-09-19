@@ -1,13 +1,12 @@
-
-# Python cache files
-__pycache__/
-*.pyc
-*.pyo
-
-# Downloaded data files
-*.gz
+# 排除训练输出和大文件
+*_output/
+*.ckpt*
+*.tfrecord
 *.zip
-
-# Temporary files
-*.tmp
-*.temp
+*.tar.bz2
+uncased_L-12_H-768_A-12/
+WikiSQL/
+WikiTableQuestions-master/
+"SQA Release 1.0"/
+*.log
+*.gz

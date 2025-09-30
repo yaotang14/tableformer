@@ -1,12 +1,28 @@
-# 排除训练输出和大文件
-*_output/
-*.ckpt*
-*.tfrecord
-*.zip
-*.tar.bz2
-uncased_L-12_H-768_A-12/
-WikiSQL/
-WikiTableQuestions-master/
-"SQA Release 1.0"/
-*.log
-*.gz
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Backup files
+*.backup
+
+# Data and output directories
+data/
+output/
+models/tapas_base/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
